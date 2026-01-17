@@ -58,7 +58,7 @@ As a former **surgeon** with 10+ years in mobile development (Android/iOS) and s
 
 Try it live!  
 [![Open In Hugging Face](https://img.shields.io/badge/Gradio%20Demo-Open%20in%20Hugging%20Face-blue?logo=huggingface)](https://huggingface.co/spaces/tsejavhaa/pneumoscan-pneumonia-xray)  
-*(Upload your trained model to HF Spaces or use local Gradio)*
+
 
 Example output:
 - Input X-ray → Pneumonia Probability: 0.87
