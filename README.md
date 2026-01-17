@@ -55,11 +55,6 @@ As a former **surgeon** with 10+ years in mobile development (Android/iOS) and s
 - Mean IoU (Segmentation): ~0.45-0.60 (depending on pseudo-mask quality)
 - Training time: ~30-60 min per 10 epochs on Kaggle P100 GPU
 
-**Training curves** (example):
-
-![Loss Curve](path/to/loss.png)  
-![IoU Curve](path/to/iou.png)
-
 ## Demo
 
 Try it live!  
