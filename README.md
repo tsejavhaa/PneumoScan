@@ -28,3 +28,29 @@ Try it live!
 ![Banner Image](./data/screeshot.png)  
 [![Open In Hugging Face](https://img.shields.io/badge/Gradio%20Demo-Open%20in%20Hugging%20Face-blue?logo=huggingface)](https://huggingface.co/spaces/tsejavhaa/pneumoscan-pneumonia-xray)  
 
+
+Here is the confusion matrix from the test set:
+
+![Confusion Matrix Example for EfficientNet Pneumonia Model](https://www.researchgate.net/publication/365951796/figure/fig15/AS:11431281104283681@1669987851976/The-EfficientNet-lite-B0-confusion-matrix-of-the-multi-class-classification-One-can.ppm)  
+*Similar pattern to our model: High recall for Pneumonia, low false negatives*
+
+More sample X-ray comparisons:
+
+![Normal vs Pneumonia Samples](https://www.researchgate.net/publication/355191637/figure/fig2/AS:11431281360957476@1744111369078/Difference-in-Chest-X-Ray-Images-in-Normal-and-Pneumonia.png)  
+*Clear visual difference: Pneumonia shows opacities/consolidation*
+
+### Tech Stack
+
+- **Framework**: PyTorch 2.0+
+- **Model**: torchvision.models.efficientnet_b0 (pretrained on ImageNet)
+- **Data**: torchvision.datasets.ImageFolder + transforms
+- **Optimizer**: AdamW (lr=3e-4, weight decay=1e-4)
+- **Scheduler**: CosineAnnealingLR
+- **Evaluation**: sklearn (classification_report, confusion_matrix), seaborn/matplotlib
+- **Training**: 12 epochs on GPU (~15-25 min)
+
+### Dataset
+
+- Source: [Kaggle – Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
+- Structure: train/val/test folders with NORMAL and PNEUMONIA subfolders
+- Classes: ['NORMAL', 'PNEUMONIA']
